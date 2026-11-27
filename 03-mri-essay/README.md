@@ -15,14 +15,15 @@
 ## 目录与编译
 
 ```
-03-mri-essay/zjuthesis/
-├── zjuthesis.tex        # 主文件（含课程与作者信息）
-├── body/                # 摘要、正文、结论与参考文献
-├── page/                # 封面、目录
-├── config/              # 宏包与格式配置
-├── figure/              # 论文配图
-└── out/zjuthesis.pdf    # 成品 PDF
+03-mri-essay/
+├── out/zjuthesis.pdf    # 成品 PDF
+└── zjuthesis/
+    ├── zjuthesis.tex    # 主文件（含课程与作者信息）
+    ├── body/            # 摘要、正文、结论与参考文献
+    ├── page/            # 封面、目录
+    ├── config/          # 宏包与格式配置
+    └── figure/          # 论文配图
 ```
 
-- 引擎：XeLaTeX（latexmk 一键编译），PDF 输出至 `out/`
-- 阅读成品：[out/zjuthesis.pdf](zjuthesis/out/zjuthesis.pdf)
+- 引擎：XeLaTeX（latexmk 一键编译），PDF 输出至上级目录 `../out/`
+- 阅读成品：[out/zjuthesis.pdf](out/zjuthesis.pdf)

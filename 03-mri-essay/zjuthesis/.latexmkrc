@@ -1,4 +1,4 @@
-$out_dir="out";
+$out_dir="../out";
 $pdf_mode=5;
 $xelatex="xelatex -synctex=1";
 $xdvipdfmx="xdvipdfmx -q -E -o %D %O %S";

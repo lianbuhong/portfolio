@@ -1,0 +1,3 @@
+# 编译产物目录：只跟踪成品 PDF，中间产物全部忽略
+out/*
+!out/zjuthesis.pdf

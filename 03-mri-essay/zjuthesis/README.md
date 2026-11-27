@@ -32,4 +32,4 @@
 latexmk
 ```
 
-PDF 输出到 `out/` 目录。VS Code 中可使用 LaTeX Workshop 插件直接编译。
+PDF 输出到 `../out/` 目录。VS Code 中可使用 LaTeX Workshop 插件直接编译。

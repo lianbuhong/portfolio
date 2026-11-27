@@ -1,6 +1,4 @@
-### This project's output files ###
-out/*
-out-*/*
+### This project's output files（输出目录已移至 ../out，由上级 .gitignore 管理） ###
 dist/*
 diff/*
 /*.pdf
