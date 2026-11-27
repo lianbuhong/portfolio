@@ -1,0 +1,46 @@
+% 浙江大学通识课程论文模板（基于 zjuthesis 精简）
+% 编译方式：在根目录运行 latexmk（XeLaTeX 引擎），PDF 输出到 out/ 目录
+
+\documentclass[
+    % 调试设置
+    PrintFilePath   = false,            % 是否在页面侧边打印 tex 文件路径
+    % 版式设置
+    TwoSide         = false,            % 课程论文单面排版，取消章节末空白页
+    % 课程与作者信息
+    CourseName      = 生物医学工程——智慧医疗的前世今生,
+    StudentName     = 刘博涵,
+    StudentID       = ,
+    AdvisorName     = 张磊,          % 请替换为实际任课/指导教师
+    Major           = 生物医学工程,
+    Department      = 生物医学工程与仪器科学学院,
+    SubmitDate      = 2026年11月10日,
+    % 论文题目
+    Title           = 从“看见病灶”到“支持决策”：扩散、灌注与功能磁共振的技术演进及临床应用
+]{zjuthesis}
+
+% 页眉中的文档类型名称（原模板为“浙江大学本科生毕业论文”）
+\renewcommand{\TitleTypeName}{课程论文}
+
+% 兼容 general/numbering.tex 中的编号样式判断
+\newcommand{\undergradcurrstage}{final}
+
+\begin{document}
+
+% 标题页
+\coverstyle
+\input{page/cover}
+
+% 前置部分：摘要、目录（罗马数字页码）
+\prevstyle
+\input{body/abstract}
+\input{page/toc}
+
+% 正文部分（阿拉伯数字页码，图表公式按章节编号）
+\bodystyle
+\sectionmajornumbering
+\input{body/content}
+
+% 参考文献
+\input{body/post}
+
+\end{document}

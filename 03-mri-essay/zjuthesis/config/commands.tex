@@ -1,0 +1,39 @@
+% 通用命令
+
+\newcommand{\ifbooltrue}[2]{\ifthenelse{\boolean{#1}}{#2}{}}
+\newcommand{\ifboolfalse}[2]{\ifthenelse{\boolean{#1}}{}{#2}}
+
+% 单面排版（TwoSide=false）时，将 \cleardoublepage 等同为 \clearpage
+\ifthenelse{\equal{\TwoSide}{true}}
+{}
+{
+    \renewcommand{\cleardoublepage}{\clearpage}
+}
+
+\newcommand{\bful}[1]{{\bfseries\uline{#1}}}
+
+% 无编号章节标题（仍会进入目录）
+\newcommand{\sectionnonum}[2][openright]
+{
+    \ifthenelse{\equal{\TwoSide}{true}}{
+        \ifthenelse{\equal{#1}{openright}}
+            {\cleardoublepage}
+            {\ifthenelse{\equal{#1}{openany}}{\clearpage}{}}
+    }{
+        \ifthenelse{\equal{#1}{openright}}
+            {\clearpage}
+            {\ifthenelse{\equal{#1}{openany}}{\clearpage}{}}
+    }
+    \phantomsection
+    \addcontentsline{toc}{section}{#2}
+    \begin{center}
+        \bfseries \zihao{3} #2
+    \end{center}
+    \setcounter{subsection}{0}
+}
+
+% 局部调整目录深度
+\newcommand{\changelocaltocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+  \setcounter{tocdepth}{#1}%
+}
