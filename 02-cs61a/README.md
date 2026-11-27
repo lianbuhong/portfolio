@@ -1,6 +1,6 @@
 # CS61A：计算机程序的结构与解释
 
-自学完成 UC Berkeley 经典课程 CS61A（The Structure and Interpretation of Computer Programs，Python 版），包括全部 8 次作业、10 个实验和 4 个课程项目，必做部分的本地测试全部通过。
+自学完成 UC Berkeley 经典课程 CS61A（The Structure and Interpretation of Computer Programs，Python 版），包括 8 次作业、10 个实验和 4 个课程项目，必做部分的本地测试全部通过。
 
 ## 学习内容
 
